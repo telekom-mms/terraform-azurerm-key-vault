@@ -1,6 +1,6 @@
 variable "resource_name" {
-  type    = set(string)
-  default     = {}
+  type        = set(string)
+  default     = []
   description = "Azure Keyvault"
 }
 variable "location" {
@@ -48,12 +48,10 @@ locals {
 
   # deep merge over merged config and use defaults if no variable is set
   keyvault_config = {
-    # get all config
-    for config in keys(var.keyvault_config) :
-    instance => {
-      for config in keys(local.default.keyvault_config) :
-      config =>
-        merge(local.default.keyvault_config, local.merged.keyvault_config[instance][config])
+    for config in keys(local.default.keyvault_config) :
+    config => {
+      for instance in keys(var.keyvault_config[config]) :
+      instance => merge(local.default.keyvault_config[config], var.keyvault_config[config][instance])
     }
   }
 }
