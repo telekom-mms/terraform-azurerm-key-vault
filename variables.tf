@@ -30,15 +30,24 @@ locals {
     tags = {}
     # resource definition
     keyvault = {
-      sku_name = "standard"
+      sku_name                        = "standard"
+      enabled_for_deployment          = false
+      enabled_for_disk_encryption     = false
+      enabled_for_template_deployment = false
+      enable_rbac_authorization       = false
+      purge_protection_enabled        = false
+      soft_delete_retention_days      = 90
     }
     # resource configuration
     keyvault_config = {
       access_policies = {
-        key_permissions         = ["create", "get", "list", "update", "delete", "get", "import", "sign", ]
-        certificate_permissions = ["create", "get", "list", "update", "delete", "get", "import", ]
-        secret_permissions      = ["set", "list", "get", "delete", ]
+        key_permissions         = []
+        certificate_permissions = []
+        secret_permissions      = []
+        storage_permissions     = []
       }
+      network_acls = {}
+      contact      = {}
     }
   }
 
