@@ -1,33 +1,24 @@
 module "keyvault" {
-  source              = "../terraform-keyvault"
-  location            = "westeurope"
-  resource_name = [
-    "service-mgmt-kv",
-  ]
-  keyvault        = {
-    resource_group_name = "service-mgmt-rg"
-    tenant_id           = data.azurerm_subscription.current.tenant_id
-  }
-  keyvault_config = {
+  source = "../terraform-keyvault"
+  keyvault = {
     mgmt = {
-      access_policies = {
+      name                     = "service-mgmt-kv"
+      location                 = "westeurope"
+      resource_group_name      = "service-mgmt-rg"
+      tenant_id                = data.azurerm_subscription.current.tenant_id
+      purge_protection_enabled = true
+
+      access_policy = {
         frontdoor = {
           object_id               = data.azuread_service_principal.frontdoor.object_id
-          key_permissions         = []
-          certificate_permissions = ["get", ]
-          secret_permissions      = ["get", ]
+          certificate_permissions = ["Get", ]
+          secret_permissions      = ["Get", ]
         }
       }
-    }
-    env = {
-      access_policies = {
-        admin       = {
-          object_id = data.azuread_group.grp-admin.object_id
-        }
+
+      tags = {
+        service = "service_name"
       }
     }
-  }
-  tags = {
-    service = "service_name"
   }
 }
