@@ -49,9 +49,9 @@ resource "azurerm_key_vault" "keyvault" {
     for_each = local.keyvault[each.key].contact
 
     content {
-      email = local.keyvault[each.key].contact[network_acls.key].email
-      name  = local.keyvault[each.key].contact[network_acls.key].name
-      phone = local.keyvault[each.key].contact[network_acls.key].phone
+      email = local.keyvault[each.key].contact[contact.key].email
+      name  = local.keyvault[each.key].contact[contact.key].name
+      phone = local.keyvault[each.key].contact[contact.key].phone
     }
   }
 
