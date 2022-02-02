@@ -40,7 +40,7 @@ locals {
     keyvault => merge(
       local.keyvault_values[keyvault],
       {
-        for config in ["access_policy","network_acls","contact"] :
+        for config in ["access_policy", "network_acls", "contact"] :
         config => {
           for key in keys(local.keyvault_values[keyvault][config]) :
           key => merge(local.default.keyvault[config], local.keyvault_values[keyvault][config][key])
