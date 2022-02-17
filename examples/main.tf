@@ -1,5 +1,5 @@
 module "keyvault" {
-  source = "../terraform-keyvault"
+  source = "registry.terraform.io/T-Systems-MMS/keyvault/azurerm"
   keyvault = {
     mgmt = {
       name                     = "service-mgmt-kv"
