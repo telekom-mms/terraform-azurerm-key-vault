@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.0.2](https://github.com/T-Systems-MMS/terraform-keyvault/tree/0.0.2) (2021-12-16)
+## [0.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/0.0.2) (2021-12-16)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-keyvault/compare/0.0.1...0.0.2)
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/0.0.1...0.0.2)
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-keyvault/tree/0.0.1) (2021-12-16)
+## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/0.0.1) (2021-12-16)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-keyvault/compare/57bb4ef2e50d80a7c6fd0a4aba232c93d8a7b0df...0.0.1)
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/57bb4ef2e50d80a7c6fd0a4aba232c93d8a7b0df...0.0.1)
 
 
 
