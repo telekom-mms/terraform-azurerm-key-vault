@@ -14,7 +14,7 @@ locals {
       enabled_for_disk_encryption     = false
       enabled_for_template_deployment = false
       enable_rbac_authorization       = false
-      purge_protection_enabled        = false
+      purge_protection_enabled        = true
       soft_delete_retention_days      = 90
       access_policy = {
         key_permissions         = []
