@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.0) (2022-02-17)
+
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/0.0.2...1.0.0)
+
+**Merged pull requests:**
+
+- feat: add further configuration arguments and change permission defaults [\#1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+
 ## [0.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/0.0.2) (2021-12-16)
 
 [Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/0.0.1...0.0.2)
