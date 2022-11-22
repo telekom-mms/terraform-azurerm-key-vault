@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.2) (2022-11-22)
+
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/1.0.1...1.0.2)
+
+**Closed issues:**
+
+- Access Policies Assignment Per Object ID / Groups [\#11](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/issues/11)
+
 ## [1.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.1) (2022-02-24)
 
 [Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/1.0.0...1.0.1)
