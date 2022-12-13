@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.2) (2022-11-22)
+## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.2) (2022-12-13)
 
 [Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/1.0.1...1.0.2)
 
