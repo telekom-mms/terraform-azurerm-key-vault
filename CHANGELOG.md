@@ -1,36 +1,37 @@
 # Changelog
 
-## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.2) (2022-12-13)
+## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.0) (2023-07-12)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/1.0.1...1.0.2)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/1.0.1...2.0.0)
 
 **Closed issues:**
 
-- Access Policies Assignment Per Object ID / Groups [\#11](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/issues/11)
+- Access Policies Assignment Per Object ID / Groups [\#11](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/11)
+- Dependency Dashboard [\#6](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/6)
 
-## [1.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.1) (2022-02-24)
+## [1.0.1](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/1.0.1) (2022-02-24)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/1.0.0...1.0.1)
-
-**Merged pull requests:**
-
-- change default for recommendation Key vaults should have purge protec… [\#2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/pull/2) ([michaelamattes](https://github.com/michaelamattes))
-
-## [1.0.0](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/1.0.0) (2022-02-17)
-
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/0.0.2...1.0.0)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/1.0.0...1.0.1)
 
 **Merged pull requests:**
 
-- feat: add further configuration arguments and change permission defaults [\#1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+- change default for recommendation Key vaults should have purge protec… [\#2](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/2) ([michaelamattes](https://github.com/michaelamattes))
 
-## [0.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/0.0.2) (2021-12-16)
+## [1.0.0](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/1.0.0) (2022-02-17)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/0.0.1...0.0.2)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/0.0.2...1.0.0)
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/tree/0.0.1) (2021-12-16)
+**Merged pull requests:**
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-keyvault/compare/57bb4ef2e50d80a7c6fd0a4aba232c93d8a7b0df...0.0.1)
+- feat: add further configuration arguments and change permission defaults [\#1](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+
+## [0.0.2](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/0.0.2) (2021-12-16)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/0.0.1...0.0.2)
+
+## [0.0.1](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/0.0.1) (2021-12-16)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/57bb4ef2e50d80a7c6fd0a4aba232c93d8a7b0df...0.0.1)
 
 
 
