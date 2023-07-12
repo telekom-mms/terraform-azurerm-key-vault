@@ -25,7 +25,7 @@ locals {
         storage_permissions     = null
       }
       network_acls = {
-        bypass = "None" // defined default
+        bypass                     = "None" // defined default
         default_action             = "Deny" // defined default
         ip_rules                   = null
         virtual_network_subnet_ids = null
