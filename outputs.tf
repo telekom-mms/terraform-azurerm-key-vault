@@ -1,10 +1,26 @@
-output "keyvault" {
-  description = "azurerm_keyvault results"
+output "key_vault" {
+  description = "Outputs all attributes of resource_type."
   value = {
-    for keyvault in keys(azurerm_key_vault.keyvault) :
-    keyvault => {
-      name = azurerm_key_vault.keyvault[keyvault].name
-      id   = azurerm_key_vault.keyvault[keyvault].id
+    for key_vault in keys(azurerm_key_vault.key_vault) :
+    key_vault => {
+      for key, value in azurerm_key_vault.key_vault[key_vault] :
+      key => value
+    }
+  }
+}
+
+output "variables" {
+  description = "Displays all configurable variables passed by the module. __default__ = predefined values per module. __merged__ = result of merging the default values and custom values passed to the module"
+  value = {
+    default = {
+      for variable in keys(local.default) :
+      variable => local.default[variable]
+    }
+    merged = {
+      key_vault = {
+        for key in keys(var.key_vault) :
+        key => local.key_vault[key]
+      }
     }
   }
 }

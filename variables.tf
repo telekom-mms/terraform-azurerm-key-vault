@@ -1,50 +1,64 @@
-variable "keyvault" {
+variable "key_vault" {
   type        = any
   default     = {}
-  description = "resource definition, default settings are defined within locals and merged with var settings"
+  description = "Resource definition, default settings are defined within locals and merged with var settings. For more information look at [Outputs](#Outputs)."
 }
 
 locals {
   default = {
-    # resource definition
-    keyvault = {
+    // resource definition
+    key_vault = {
       name                            = ""
-      sku_name                        = "standard"
-      enabled_for_deployment          = false
-      enabled_for_disk_encryption     = false
-      enabled_for_template_deployment = false
-      enable_rbac_authorization       = false
-      purge_protection_enabled        = true
-      soft_delete_retention_days      = 90
+      sku_name                        = "standard" // defined default
+      enabled_for_deployment          = null
+      enabled_for_disk_encryption     = null
+      enabled_for_template_deployment = null
+      enable_rbac_authorization       = null
+      purge_protection_enabled        = true // defined default
+      public_network_access_enabled   = null
+      soft_delete_retention_days      = null
       access_policy = {
-        key_permissions         = []
-        certificate_permissions = []
-        secret_permissions      = []
-        storage_permissions     = []
+        application_id          = null
+        certificate_permissions = null
+        key_permissions         = null
+        secret_permissions      = null
+        storage_permissions     = null
       }
-      network_acls = {}
-      contact      = {}
-      tags         = {}
+      network_acls = {
+        bypass                     = "None" // defined default
+        default_action             = "Deny" // defined default
+        ip_rules                   = null
+        virtual_network_subnet_ids = null
+      }
+      contact = {
+        name  = ""
+        phone = ""
+      }
+      tags = {}
     }
   }
 
-  # compare and merge custom and default values
-  keyvault_values = {
-    for keyvault in keys(var.keyvault) :
-    keyvault => merge(local.default.keyvault, var.keyvault[keyvault])
+  // compare and merge custom and default values
+  key_vault_values = {
+    for key_vault in keys(var.key_vault) :
+    key_vault => merge(local.default.key_vault, var.key_vault[key_vault])
   }
 
-  # merge all custom and default values
-  keyvault = {
-    for keyvault in keys(var.keyvault) :
-    keyvault => merge(
-      local.keyvault_values[keyvault],
+  // deep merge of all custom and default values
+  key_vault = {
+    for key_vault in keys(var.key_vault) :
+    key_vault => merge(
+      local.key_vault_values[key_vault],
       {
-        for config in ["access_policy", "network_acls", "contact"] :
+        for config in ["access_policy"] :
         config => {
-          for key in keys(local.keyvault_values[keyvault][config]) :
-          key => merge(local.default.keyvault[config], local.keyvault_values[keyvault][config][key])
+          for key in keys(lookup(var.key_vault[key_vault], config, {})) :
+          key => merge(local.default.key_vault[config], local.key_vault_values[key_vault][config][key])
         }
+      },
+      {
+        for config in ["network_acls", "contact"] :
+        config => lookup(var.key_vault[key_vault], config, {}) == {} ? null : merge(local.default.key_vault[config], local.key_vault_values[key_vault][config])
       }
     )
   }
