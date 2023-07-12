@@ -7,6 +7,7 @@
 */
 
 resource "azurerm_key_vault" "key_vault" {
+  #ts:skip=AC_AZURE_0169 terrascan - metrick logs not part of this module
   for_each = var.key_vault
 
   name                            = local.key_vault[each.key].name == "" ? each.key : local.key_vault[each.key].name
