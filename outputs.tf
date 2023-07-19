@@ -9,6 +9,17 @@ output "key_vault" {
   }
 }
 
+output "key_vault_secret" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for key_vault_secret in keys(azurerm_key_vault_secret.key_vault_secret) :
+    key_vault_secret => {
+      for key, value in azurerm_key_vault_secret.key_vault_secret[key_vault_secret] :
+      key => value
+    }
+  }
+}
+
 output "variables" {
   description = "Displays all configurable variables passed by the module. __default__ = predefined values per module. __merged__ = result of merging the default values and custom values passed to the module"
   value = {
@@ -20,6 +31,10 @@ output "variables" {
       key_vault = {
         for key in keys(var.key_vault) :
         key => local.key_vault[key]
+      }
+      key_vault_secret = {
+        for key in keys(var.key_vault_secret) :
+        key => local.key_vault_secret[key]
       }
     }
   }

@@ -60,3 +60,15 @@ resource "azurerm_key_vault" "key_vault" {
 
   tags = local.key_vault[each.key].tags
 }
+
+resource "azurerm_key_vault_secret" "key_vault_secret" {
+  for_each = var.key_vault_secret
+
+  name            = local.key_vault_secret[each.key].name == "" ? each.key : local.key_vault_secret[each.key].name
+  value           = local.key_vault_secret[each.key].value
+  key_vault_id    = local.key_vault_secret[each.key].key_vault_id
+  content_type    = local.key_vault_secret[each.key].content_type
+  not_before_date = local.key_vault_secret[each.key].not_before_date
+  expiration_date = local.key_vault_secret[each.key].expiration_date
+  tags            = local.key_vault_secret[each.key].tags
+}

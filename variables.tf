@@ -3,6 +3,11 @@ variable "key_vault" {
   default     = {}
   description = "Resource definition, default settings are defined within locals and merged with var settings. For more information look at [Outputs](#Outputs)."
 }
+variable "key_vault_secret" {
+  type        = any
+  default     = {}
+  description = "Resource definition, default settings are defined within locals and merged with var settings. For more information look at [Outputs](#Outputs)."
+}
 
 locals {
   default = {
@@ -36,6 +41,13 @@ locals {
       }
       tags = {}
     }
+    key_vault_secret = {
+      name            = ""
+      content_type    = null
+      not_before_date = null
+      expiration_date = null
+      tags            = {}
+    }
   }
 
   // compare and merge custom and default values
@@ -61,5 +73,9 @@ locals {
         config => lookup(var.key_vault[key_vault], config, {}) == {} ? null : merge(local.default.key_vault[config], local.key_vault_values[key_vault][config])
       }
     )
+  }
+  key_vault_secret = {
+    for key_vault_secret in keys(var.key_vault_secret) :
+    key_vault_secret => merge(local.default.key_vault_secret, var.key_vault_secret[key_vault_secret])
   }
 }
