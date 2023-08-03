@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.1) (2023-08-03)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.0...2.0.1)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#6](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/6)
+
 ## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.0) (2023-07-12)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/1.0.1...2.0.0)
@@ -7,7 +15,18 @@
 **Closed issues:**
 
 - Access Policies Assignment Per Object ID / Groups [\#11](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/11)
-- Dependency Dashboard [\#6](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/6)
+
+**Merged pull requests:**
+
+- Refactoring [\#16](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/16) ([michaelamattes](https://github.com/michaelamattes))
+- add Renovate Dependency Dashboard and automatic merge on patch updates [\#14](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/14) ([michaelamattes](https://github.com/michaelamattes))
+- Update actions/checkout action to v3.2.0 [\#13](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/13) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.1.0 [\#12](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/12) ([renovate[bot]](https://github.com/apps/renovate))
+- Update hashicorp/setup-terraform action to v2 [\#10](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
+- Update creyD/prettier\_action action to v4 [\#9](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/9) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action [\#8](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/8) ([renovate[bot]](https://github.com/apps/renovate))
+- Update github-actions-x/commit action to v2.9 [\#7](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/7) ([renovate[bot]](https://github.com/apps/renovate))
+- add renovate config [\#3](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/3) ([michaelamattes](https://github.com/michaelamattes))
 
 ## [1.0.1](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/1.0.1) (2022-02-24)
 
