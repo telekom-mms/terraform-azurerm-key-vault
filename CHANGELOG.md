@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.0...2.0.1)
 
+**Implemented enhancements:**
+
+- add resource key\_vault\_secret, add tflint settings [\#18](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/18) ([michaelamattes](https://github.com/michaelamattes))
+
 **Closed issues:**
 
 - Dependency Dashboard [\#6](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/6)
