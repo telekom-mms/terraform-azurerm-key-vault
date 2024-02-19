@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 data "azurerm_subscription" "current" {}
 
 resource "random_password" "password" {
@@ -19,6 +23,11 @@ module "key_vault" {
   key_vault_secret = {
     mysql-root = {
       value        = random_password.password["mysql_root"].result
+      key_vault_id = module.key_vault.key_vault["kv-mms"].id
+    }
+  }
+  key_vault_key = {
+    mms-key = {
       key_vault_id = module.key_vault.key_vault["kv-mms"].id
     }
   }
