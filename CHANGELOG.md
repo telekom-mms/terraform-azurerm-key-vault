@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.2) (2024-08-28)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.1...2.0.2)
+
+**Merged pull requests:**
+
+- Pin version of azurerm to compatible state   [\#23](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/23) ([michaelamattes](https://github.com/michaelamattes))
+- run terrascan in test setting directory [\#19](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/19) ([michaelamattes](https://github.com/michaelamattes))
+
 ## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.1) (2023-08-03)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.0...2.0.1)
@@ -7,10 +16,6 @@
 **Implemented enhancements:**
 
 - add resource key\_vault\_secret, add tflint settings [\#18](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/18) ([michaelamattes](https://github.com/michaelamattes))
-
-**Closed issues:**
-
-- Dependency Dashboard [\#6](https://github.com/telekom-mms/terraform-azurerm-key-vault/issues/6)
 
 ## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.0) (2023-07-12)
 
