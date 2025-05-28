@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 data "azurerm_subscription" "current" {}
 
 resource "random_password" "password" {
