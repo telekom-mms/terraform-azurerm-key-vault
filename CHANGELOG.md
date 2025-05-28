@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.3](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.3) (2025-05-28)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.2...2.0.3)
+
+**Implemented enhancements:**
+
+- New resource azurerm\_key\_vault\_key [\#20](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/20) ([habr-mms](https://github.com/habr-mms))
+
 ## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.2) (2024-08-28)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.1...2.0.2)
