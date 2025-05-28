@@ -22,4 +22,9 @@ module "key_vault" {
       key_vault_id = module.key_vault.key_vault["kv-mms"].id
     }
   }
+  key_vault_key = {
+    mms-key = {
+      key_vault_id = module.key_vault.key_vault["kv-mms"].id
+    }
+  }
 }

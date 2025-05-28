@@ -72,3 +72,36 @@ resource "azurerm_key_vault_secret" "key_vault_secret" {
   expiration_date = local.key_vault_secret[each.key].expiration_date
   tags            = local.key_vault_secret[each.key].tags
 }
+
+resource "azurerm_key_vault_key" "key_vault_key" {
+  for_each = var.key_vault_key
+
+  name            = local.key_vault_key[each.key].name == "" ? each.key : local.key_vault_key[each.key].name
+  key_vault_id    = local.key_vault_key[each.key].key_vault_id
+  key_type        = local.key_vault_key[each.key].key_type
+  key_size        = local.key_vault_key[each.key].key_size
+  curve           = local.key_vault_key[each.key].curve
+  key_opts        = local.key_vault_key[each.key].key_opts
+  not_before_date = local.key_vault_key[each.key].not_before_date
+  expiration_date = local.key_vault_key[each.key].expiration_date
+
+  dynamic "rotation_policy" {
+    for_each = length(compact(concat([for key in setsubtract(keys(local.key_vault_key[each.key].rotation_policy), ["automatic"]) : local.key_vault_key[each.key].rotation_policy[key]], values(local.key_vault_key[each.key].rotation_policy["automatic"])))) > 0 ? [0] : []
+
+    content {
+      expire_after         = local.key_vault_key[each.key].rotation_policy.expire_after
+      notify_before_expiry = local.key_vault_key[each.key].rotation_policy.notify_before_expiry
+
+      dynamic "automatic" {
+        for_each = length(compact(values(local.key_vault_key[each.key].rotation_policy.automatic))) > 0 ? [0] : []
+
+        content {
+          time_after_creation = local.key_vault_key[each.key].rotation_policy.automatic.time_after_creation
+          time_before_expiry  = local.key_vault_key[each.key].rotation_policy.automatic.time_before_expiry
+        }
+      }
+    }
+  }
+
+  tags = local.key_vault_key[each.key].tags
+}
