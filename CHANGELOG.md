@@ -1,12 +1,16 @@
 # Changelog
 
-## [2.0.4](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.4) (2025-08-28)
+## [3.0.0](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/3.0.0) (2025-12-11)
 
-[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.3...2.0.4)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-key-vault/compare/2.0.3...3.0.0)
 
 **Fixed bugs:**
 
 - fix terrascan workflow run [\#24](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/24) ([michaelamattes](https://github.com/michaelamattes))
+
+**Merged pull requests:**
+
+- Upgrade azurerm version to 4 [\#25](https://github.com/telekom-mms/terraform-azurerm-key-vault/pull/25) ([michaelamattes](https://github.com/michaelamattes))
 
 ## [2.0.3](https://github.com/telekom-mms/terraform-azurerm-key-vault/tree/2.0.3) (2025-05-28)
 
