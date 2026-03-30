@@ -4,10 +4,11 @@
     "visibility": "public",
     "default_branch": "main",
     "topics": [
-      "terraform",
       "azure",
       "key-vault",
-      "key-vault-secret"
+      "key-vault-key",
+      "key-vault-secret",
+      "terraform"
     ]
   }
 }
